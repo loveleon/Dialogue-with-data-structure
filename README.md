@@ -11,7 +11,7 @@
 |**第二章：算法**|[无源码]|
 |**第三章：线性表**||
 |线性表的顺序储存结构|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第三章%EF%BC%9A线性表/SqList.cpp)|
-|线性表的链式储存结构|[完成]|
+|线性表的链式储存结构|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第三章%EF%BC%9A线性表/LinkList.cpp)|
 |**第四章：栈与队列**||
 |**第五章：串**||
 |**第六章：树**||
