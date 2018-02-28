@@ -14,9 +14,9 @@ public:
 	}
 	~LinkList() {}
 	/*返回线性表长度*/
-	int getLength() { return list->data; }
+	int getLength() const { return list->data; }
 	/*若线性表为空返回true，否则返回false*/
-	bool isEmpty() { return list->data == 0 ? true : false; }
+	bool isEmpty() const { return list->data == 0 ? true : false; }
 	/*清空线性表*/
 	void clearList() { 
 		if (isEmpty()) return;	
@@ -34,7 +34,7 @@ public:
 		}
 	}
 	/*查找：查找表中与e相同的元素，成功返回其下标，否则返回-1*/
-	int locateElem(ElemType e) {
+	int locateElem(ElemType e) const{
 		if (isEmpty()) return -1;
 		Node *p = list->next;
 		int k = 1;
@@ -47,7 +47,7 @@ public:
 		return -1;
 	}
 	/*获得元素：用e返回该表中第i个数据元素的值*/
-	bool GetElem(int i, ElemType *e){
+	bool getElem(int i, ElemType *e) const{
 		/*声明一指针p*/
 		Node *p;
 		/*让p指向链表的第一个节点*/
@@ -65,7 +65,7 @@ public:
 		return true;
 	}
 	/*插入：在表中第i个位置插入e，length+1*/
-	bool ListInsert(int i, ElemType e) {	
+	bool listInsert(int i, ElemType e) {	
 		int j = 1;
 		Node *p, *s;
 		p = list;
@@ -87,7 +87,7 @@ public:
 		return true;
 	}
 	/*删除：删除表中第i个数据元素并返回给e，length-1*/
-	bool ListDelete(int i, ElemType *e) {
+	bool listDelete(int i, ElemType *e) {
 		int j = 1;
 		Node *p, *q;
 		p = list;
@@ -108,7 +108,7 @@ public:
 		return true;
 	}
 	/*打印链表中的元素*/
-	void show() {
+	void show() const{
 		if(0!=list->data){
 			Node *p = list->next;
 			cout << p->data;

@@ -9,26 +9,26 @@ public:
 	SqList() { length = 0; }
 	~SqList() {}
 	/*返回线性表长度*/
-	int getLength() { return length; }
+	int getLength() const { return length; }
 	/*若线性表为空返回true，否则返回false*/
-	bool isEmpty() { return length == 0 ? true : false; }
+	bool isEmpty() const { return length == 0 ? true : false; }
 	/*清空线性表*/
 	void clearList() { length = 0; }
 	/*查找：查找表中与e相同的元素，成功返回其下标，否则返回-1*/
-	int locateElem(ElemType e) {
+	int locateElem(ElemType e) const {
 		for (int i = 0; i != length; i++) {
 			if (data[i] == e) return i;
 		}
 		return -1;
 	}
 	/*获得元素：用e返回该表中第i个数据元素的值*/
-	bool GetElem(int i, ElemType *e){
+	bool getElem(int i, ElemType *e)const {
 		if (0 == length || i<1 || i>length)return false;
 		*e = data[i - 1];
 		return true;
 	}
 	/*插入：在表中第i个位置插入e，length+1*/
-	bool ListInsert(int i, ElemType e) {
+	bool listInsert(int i, ElemType e) {
 		int k;
 		/*顺序线性表已满*/
 		if (length == MAXSIZE) return false;
@@ -46,7 +46,7 @@ public:
 		return true;	
 	}
 	/*删除：删除表中第i个数据元素并返回给e，length-1*/
-	bool ListDelete(int i, ElemType *e) {
+	bool listDelete(int i, ElemType *e) {
 		int k;
 		/*线性表为空*/
 		if (0 == length)return false;
@@ -62,7 +62,7 @@ public:
 		length--;
 		return true;
 	}
-	void show() {
+	void show() const{
 		if (length != 0) {
 			cout << data[0];
 			for (int i = 1; i != length && cout << "-"; i++) {
