@@ -85,22 +85,22 @@ int main(void) {
 	mylist.show();
 	cout << endl;
 	/*将1-9-9插入到线性表*/
-	mylist.ListInsert(1, e);
+	mylist.listInsert(1, e);
 	e = 9;
-	mylist.ListInsert(2, e);
-	mylist.ListInsert(3, e);
+	mylist.listInsert(2, e);
+	mylist.listInsert(3, e);
 
 	mylist.show();
 	cout << "length :" << mylist.getLength() << endl;
 	cout << endl;
 
 	/*将第一个元素的值返回给e*/
-	mylist.GetElem(1, &e);
+	mylist.getElem(1, &e);
 	cout << "e的值为:" << e << endl;
 	cout << "e所在的位置位:" << mylist.locateElem(e)+1 << endl;
 
 	/*删除线性表中第二个元素*/
-	mylist.ListDelete(2, &e);
+	mylist.listDelete(2, &e);
 	mylist.show();
 	cout << "length :" << mylist.getLength() << endl;
 
