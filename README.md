@@ -12,11 +12,11 @@
 |**第三章：线性表**||
 |线性表的顺序储存结构|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第三章%EF%BC%9A线性表/SqList.cpp)|
 |线性表的链式储存结构|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第三章%EF%BC%9A线性表/LinkList.cpp)|
-|静态链表|[完成][1]|
+|静态链表|[完成]((https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第三章%EF%BC%9A线性表/StaticLinkList.cpp))|
 |单循环链表及双向链表|[无源码]|
 |**第四章：栈与队列**||
 |栈的顺序储存结构|[无源码]|
-|栈的链式储存结构|[完成]()|
+|栈的链式储存结构|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第四章%EF%BC%9A栈与队列/LinkStack.cpp)|
 |***栈的应用***||
 |##||
 |**第五章：串**||
@@ -24,6 +24,3 @@
 |**第七章：图**||
 |**第八章：查找**||
 |**第九章：排序**||
-
-
-[1]:(https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第三章%EF%BC%9A线性表/StaticLinkList.cpp) "静态链表"
