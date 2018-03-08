@@ -17,8 +17,10 @@
 |**第四章：栈与队列**||
 |栈的顺序储存结构|[无源码]|
 |栈的链式储存结构|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第四章%EF%BC%9A栈与队列/LinkStack.cpp)|
-|***栈的应用***||
-|##--中缀表达式转后缀表达式(RPN)并求计算其值|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/tree/master/第四章%EF%BC%9A栈与队列/中缀表达式转RPN并计算)|
+|*栈的应用*||
+|--中缀表达式转后缀表达式(RPN)并求计算其值|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/tree/master/第四章%EF%BC%9A栈与队列/中缀表达式转RPN并计算)|
+|队列的顺序储存结构--循环队列|[完成]()|
+|队列的链式储存结构|[无源码]|
 |**第五章：串**||
 |**第六章：树**||
 |**第七章：图**||
