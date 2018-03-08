@@ -2,6 +2,14 @@
 using namespace std;
 #define MAXIMUM  50
 
+
+/************
+队列的顺序储存--循环队列
+front指向队列的前端
+rear指向队列尾端元素的下一个位置
+front==rear时队列为空
+(rear + 1) % MAXIMUM == front 时队列满
+*************/
 template<typename ElemType>
 class SqQueue {
 public :
@@ -9,10 +17,12 @@ public :
 		init();
 	}
 	~SqQueue() {}
+	//初始化队列
 	void init() {
 		front = 0;
 		rear = 0;
 	}
+	//获取队列的长度
 	int getLength() const {
 		return (rear - front + MAXIMUM) % MAXIMUM;
 	}
@@ -22,11 +32,13 @@ public :
 	bool isEmpty() const{
 		return front == rear ? true : false;
 	}
+	//获取队头元素，不弹出
 	bool getHead(ElemType *e) {
 		if (isEmpty())return false;
 		else *e = data[front];
 		return true;
 	}
+	//将元素e插入队尾
 	bool enter_back(const ElemType e) {
 		if ((rear + 1) % MAXIMUM == front) return false;
 		else {
@@ -35,6 +47,7 @@ public :
 			return true;
 		}
 	}
+	//弹出队头元素到e
 	bool delete_front(ElemType *e) {
 		if (isEmpty()) return false;
 		else {
