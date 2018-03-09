@@ -76,7 +76,6 @@ int main(void) {
 		}
 		/*遇到右括号则出栈直至左括号*/
 		else if (k == ')') {
-			_ASSERT(lbracket);
 			int j = i;
 			char kk;
 			mystack.pop(&kk);
