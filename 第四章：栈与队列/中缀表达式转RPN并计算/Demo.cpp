@@ -59,7 +59,6 @@ int main(void) {
 	cout << "Please input a expression :";
 	cin >> expression;
 	char k;
-	bool lbracket = false;
 
 	for (int i = 0; i < expression.length(); i++) {
 		k = expression[i];
@@ -84,11 +83,9 @@ int main(void) {
 				RPN += ' ';
 				mystack.pop(&kk);
 			}
-			lbracket = false;
 		}
 		/*遇到左括号直接压栈*/
 		else if (k == '(') {
-			lbracket = true;
 			mystack.push(k);
 		}
 		/*遇到运算符则按照优先级进行压栈和出栈操作*/
