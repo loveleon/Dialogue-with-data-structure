@@ -22,6 +22,8 @@
 |队列的顺序储存结构--循环队列|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第四章%EF%BC%9A栈与队列/SqQueue.cpp)|
 |队列的链式储存结构|[无源码]|
 |**第五章：串**||
+|MyString 串的顺序储存结构实现&&K.M.P算法|[完成](https://github.com/Mer1997/Dialogue-with-data-structure/blob/master/第五章%EF%BC%9A串/MyString.cpp)|
+|串的链式储存结构|[无源码]|
 |**第六章：树**||
 |**第七章：图**||
 |**第八章：查找**||
