@@ -28,33 +28,40 @@ public :
 			data[i] = S.getIndex(i);
 		}
 	}
+	//获取串index处的字符
 	char getIndex(int i) const{
 		return data[i];
 	}
+	//改变串index处的字符 失败直接返回
 	void setIndex(int i, char c) {
 		if (i > length() || i < 0) return;
 		data[i] = c;
 	}
+	//获取串的长度
 	int length() const{
 		int count = 0;
 		while (data[count] != 0) count++;
 		return count;
 	}
+	//清空串
 	void clear() {
 		init();
 	}
+	//串是否为空
 	bool isEmpty() const { return length() == 0 ? true : false; }
+	//若本串>S串 返回 1 相等返回0 否则返回 -1；
 	int compare(const MyString& S) {
 		int length1 = length();
 		int length2 = S.length();
-		if (length1 != length2) return length1 > length2 ? -1 : 1;
+		if (length1 != length2) return length1 > length2 ? 1 : -1;
 		else {
 			for (int i = 0; i != length1; i++) {
-				if (data[i] != S.getIndex(i)) return data[i] > S.getIndex(i) ? -1 : 1;
+				if (data[i] != S.getIndex(i)) return data[i] > S.getIndex(i) ? 1 : -1;
 			}
 			return 0;
 		}
 	}
+	//重载<<
 	friend std::ostream& operator<<(std::ostream& os, MyString& T) {
 		int i = 0;
 		while (T.getIndex(i) != 0) {
@@ -63,7 +70,7 @@ public :
 		}
 		return os;
 	}
-
+	//重载 + ：等于concat 返回一个由str1 , str2 拼接的串
 	MyString operator+(const MyString &str2) {
 		MyString resstr;
 		int length1 = length();
@@ -73,13 +80,14 @@ public :
 		for (int i = 0; i != length2; i++) resstr.setIndex(length1 + i, str2.getIndex(i));
 		return resstr;
 	}
+	//返回串中 pos -> pos + length 的字串
 	MyString subString(int pos, int length1) {
 		MyString resstr;
 		if (pos - 1 + length1 >= length() || pos < 1 || length1 < 0) return resstr;
 		for (int i = 0; i != length1; i++) resstr.setIndex(i, data[pos - 1 + i]);
 		return resstr;
 	}
-
+	//查找串中是否包含串T 找到返回第一个字符下标，否则返回-1
 	int index_KMP(const MyString& T, int pos) {
 		int length1 = length();
 		int length2 = T.length();
@@ -102,7 +110,8 @@ public :
 			}
 			return -1;
 		}
-			}
+	}
+	//将串T插入在str的pos前
 	void insert(int pos, const MyString& T) {
 		int length1 = length();
 		int length2 = T.length();
@@ -114,6 +123,7 @@ public :
 			data[pos + i] = T.getIndex(i);
 		}
 	}
+	//删除串中 pos -> pos + length 字符
 	void _delete(int pos, int length) {
 		int length1 = this->length();
 		if (pos < 1 || pos > length1) return; 
@@ -125,6 +135,7 @@ public :
 		for (int i = length1 - length; i != length1; i++) data[i] = 0;
 	}
 private:
+	//初始化串
 	void init() {
 		for (int i = 0; i != MAXIMUM; i++) {
 			data[i] = 0;
